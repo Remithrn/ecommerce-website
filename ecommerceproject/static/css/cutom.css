@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background-color:gray;
     
 }
 .nav-item{
@@ -291,7 +292,7 @@ body {
     }
 }
 
-.card {
+.cards {
     margin: 25px;
     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
     background-color: #fff;
@@ -301,9 +302,52 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  .card:hover {
+  .cards:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       transform: scale(1.10, 1.10);
   }
 
+  .cards{
+    background-color: white;
+    width: 300px;
+   
+    border: 1px solid rgba(211,211,211,0.548);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 10px;
+  }
+  .cards:hover{
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2)
+  }
+  .cards img{
+    width: 210px;
+    margin-top: 20px;
+    transition: 0.4s;
+    
+
+  }
+  .cards img:hover{
+    transition: 0.4s;
+    transform: rotate(5deg)scale(1.1);
+  }
+  .product-detail{
+    color:gray;
+    padding: 0 14px;
+  }
+  .product-cost{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .buy-btn{
+    text-decoration: none;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
   

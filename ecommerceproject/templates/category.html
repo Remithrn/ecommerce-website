@@ -40,20 +40,24 @@
 <br>
 <div style="border: 1px;">
     <h1 class="text-center my_title">our products collection</h1>
-    <p class="text-justify disc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque tempore illo officiis explicabo, adipisci tenetur architecto ipsam praesentium suscipit nam facere deserunt. Eaque nobis est, vel possimus aspernatur saepe quos!</p>
+    <p class="text-center disc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque tempore illo officiis explicabo, adipisci tenetur architecto ipsam praesentium suscipit nam facere deserunt. Eaque nobis est, vel possimus aspernatur saepe quos!</p>
 </div>
  {% endif %}
  <div class="container">
     <div class="row mx-auto">
         {% for product in products.object_list  %}
         <div class="my_bottom_margin col-9 col-sm-12 col-md-4  col-lg-4">
-            <div class="card text-center" style="min-width: 18rem;">
-                <a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
-            <div class="card-body">
-                <h4>{{product.name}}</h4>
-                <p>Rs{{product.price}}</p>
-            </div>
-            </div>
+            <div class="main-container">
+                <div class="cards">
+                    <a href="{{product.get_url}}"><img src="{{product.image.url}}" alt="{{product.name}}"></a>
+                    <h3 class="product-name">{{product.name}}</h3>
+                    
+                    <p class="product-detail">{{product.category}}</p>
+                    <p class="product-cost">Rs{{product.price}}</p>
+                    <div class="buy-btn"><a  style="text-decoration:none; color: whitesmoke;" href="{{product.get_url}}">Buy Now</a></div>
+                </div>
+             </div>
+           
         </div>
         {% endfor %}
     </div>
@@ -69,4 +73,5 @@
     </div>
     <br>
  </div>
+
 {% endblock  %}
